@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Voto {
 	private int voto;
-	private String corsoString;
+	private String corso;
 	private LocalDate data;
 	
-	public Voto(int voto, String corsoString, LocalDate data) {
+	public Voto(int voto, String corso, LocalDate data) {
 		super();
 		this.voto = voto;
-		this.corsoString = corsoString;
+		this.corso = corso;
 		this.data = data;
 	}
 	
@@ -20,11 +20,11 @@ public class Voto {
 	public void setVoto(int voto) {
 		this.voto = voto;
 	}
-	public String getCorsoString() {
-		return corsoString;
+	public String getCorso() {
+		return corso;
 	}
-	public void setCorsoString(String corsoString) {
-		this.corsoString = corsoString;
+	public void setCorso(String corso) {
+		this.corso = corso;
 	}
 	public LocalDate getData() {
 		return data;
