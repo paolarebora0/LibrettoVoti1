@@ -8,6 +8,7 @@ public class TestLibretto {
 	public static void main(String[] args) {
 		Libretto libretto = new Libretto();
 		
+		//Punto 1
 		libretto.add(new Voto(30, "Analisi I", LocalDate.of(2017, 1, 15)));
 		libretto.add(new Voto(21, "Analisi II", LocalDate.of(2018, 1, 25)));
 		libretto.add(new Voto(25, "Fisica I", LocalDate.of(2017, 6, 10)));
@@ -41,6 +42,12 @@ public class TestLibretto {
 		System.out.format("Il voto %s è in conflitto %s\n", giusto.toString(), libretto.votoConflitto(giusto));
 		System.out.format("Il voto %s è in conflitto %s\n", sbagliato.toString(), libretto.votoConflitto(sbagliato));
 		System.out.format("Il voto %s è in conflitto %s\n", mancante.toString(), libretto.votoConflitto(mancante));
+
+		//Punto 6
+		System.out.println(libretto.add(giusto));
+		System.out.println(libretto.add(sbagliato));
+		System.out.println(libretto.add(mancante));
+		System.out.println(libretto.toString());
 
 	}
 
