@@ -19,13 +19,25 @@ public class TestLibretto {
 		libretto.add(new Voto(25, "Logistica", LocalDate.of(2019, 2, 1)));
 		libretto.add(new Voto(27, "Programmazione a Oggetti", LocalDate.of(2019, 1, 25)));
 
+		//Punto 2
 		List<Voto> venticinque = libretto.cercaVoti(25);
 		System.out.println(venticinque);
 		
+		//Punto 3
 		Voto a1 = libretto.cercaEsame("Analisi I");
 		Voto a3 = libretto.cercaEsame("Analisi III");
 		System.out.println(a1);
 		System.out.println(a3);
+		
+		//Punto 4
+		Voto giusto = new Voto(18, "Geometria", LocalDate.now());
+		Voto sbagliato = new Voto(28, "Geometria", LocalDate.now());
+		Voto mancante = new Voto(30, "Merendine", LocalDate.now());
+		System.out.format("Il voto %s è %s\n", giusto.toString(), libretto.esisteGiaVoto(giusto));
+		System.out.format("Il voto %s è %s\n", sbagliato.toString(), libretto.esisteGiaVoto(sbagliato));
+		System.out.format("Il voto %s è %s\n", mancante.toString(), libretto.esisteGiaVoto(mancante));
+
+		
 
 	}
 
