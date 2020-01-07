@@ -60,6 +60,12 @@ public class TestLibretto {
 		Libretto migliore = libretto.librettoMigliorato();
 		System.out.println(libretto.toString());
 		System.out.println(migliore.toString());
+		
+		//Punto 9
+		System.out.println("Punto 9");
+		migliore.cancellaVotiScarsi();
+		System.out.println(migliore.toString());
+
 
 	}
 
