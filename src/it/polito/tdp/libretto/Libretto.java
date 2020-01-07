@@ -36,10 +36,6 @@ public class Libretto {
 		}
 	}
 	
-	public String toString() {
-		return this.voti.toString();
-	}
-	
 	
 	/**
 	 * Seleziona il sottoinsieme di voti che hanno il punteggio specificato
@@ -113,5 +109,25 @@ public class Libretto {
 		}		
 	}
 	
-
+	public String toString() {
+		return this.voti.toString();
+	}
+	
+	
+	public Libretto librettoMigliorato() {
+		Libretto nuovo = new Libretto();
+		for(Voto v: this.voti) {
+			nuovo.add(v.clone()); //In questo modo creo un clone ma non modifico quello vecchio
+		}
+		//I due libretti contengono ancora gli stessi voti
+		for(Voto v: nuovo.voti) {
+			int punti = v.getPunti();
+			if(punti<=24)
+				punti = punti +1;
+			else if(punti <= 28)
+				punti = punti +2;
+			v.setPunti(punti);
+		}
+		return nuovo;
+	}
 }

@@ -9,6 +9,7 @@ public class TestLibretto {
 		Libretto libretto = new Libretto();
 		
 		//Punto 1
+		System.out.println("Punto 1");
 		libretto.add(new Voto(30, "Analisi I", LocalDate.of(2017, 1, 15)));
 		libretto.add(new Voto(21, "Analisi II", LocalDate.of(2018, 1, 25)));
 		libretto.add(new Voto(25, "Fisica I", LocalDate.of(2017, 6, 10)));
@@ -21,16 +22,19 @@ public class TestLibretto {
 		libretto.add(new Voto(27, "Programmazione a Oggetti", LocalDate.of(2019, 1, 25)));
 
 		//Punto 2
+		System.out.println("Punto 2");
 		List<Voto> venticinque = libretto.cercaVoti(25);
 		System.out.println(venticinque);
 		
 		//Punto 3
+		System.out.println("Punto 3");
 		Voto a1 = libretto.cercaEsame("Analisi I");
 		Voto a3 = libretto.cercaEsame("Analisi III");
 		System.out.println(a1);
 		System.out.println(a3);
 		
 		//Punto 4
+		System.out.println("Punto 4");
 		Voto giusto = new Voto(18, "Geometria", LocalDate.now());
 		Voto sbagliato = new Voto(28, "Geometria", LocalDate.now());
 		Voto mancante = new Voto(30, "Merendine", LocalDate.now());
@@ -39,15 +43,23 @@ public class TestLibretto {
 		System.out.format("Il voto %s è %s\n", mancante.toString(), libretto.esisteGiaVoto(mancante));
 
 		//Punto 5
+		System.out.println("Punto 5");
 		System.out.format("Il voto %s è in conflitto %s\n", giusto.toString(), libretto.votoConflitto(giusto));
 		System.out.format("Il voto %s è in conflitto %s\n", sbagliato.toString(), libretto.votoConflitto(sbagliato));
 		System.out.format("Il voto %s è in conflitto %s\n", mancante.toString(), libretto.votoConflitto(mancante));
 
 		//Punto 6
+		System.out.println("Punto 6");
 		System.out.println(libretto.add(giusto));
 		System.out.println(libretto.add(sbagliato));
 		System.out.println(libretto.add(mancante));
 		System.out.println(libretto.toString());
+		
+		//Punto 7
+		System.out.println("Punto 7");
+		Libretto migliore = libretto.librettoMigliorato();
+		System.out.println(libretto.toString());
+		System.out.println(migliore.toString());
 
 	}
 
